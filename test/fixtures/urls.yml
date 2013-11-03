@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  url: www.google.com
+  key: abc
+
+two:
+  url: www.yahoo.com
+  key: def

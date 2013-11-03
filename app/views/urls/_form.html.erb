@@ -1,0 +1,33 @@
+<%= form_for(@url) do |f| %>
+<% if @url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@url.errors.count, "error") %> prohibited this url from being saved:</h2>
+
+      <ul>
+      <% @url.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+<table align="center" cellpadding="5" class="create-form"><tr><td>
+  <div class="field">
+    <font face="century schoolbook" size="4">
+      <strong><%= f.label "Enter a long URL to shorten:" %></strong></strong><br>
+    </font>
+    <%= f.text_field :url, :size => 40%>
+  </div>
+  <div class="actions">
+    <%= f.submit :value => "Create Short URL!"%>
+  </div>
+  <hr>
+  Custom alias (optional):
+  <div class="field">
+  <br>http://shorturl.com/
+   <%= f.text_field :key, :size => 15%>
+  </div>
+</table>
+<% end %>
+
